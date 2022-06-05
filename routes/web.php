@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/users', function () {
-    return view('layout');
+//Route::get('/users', function () {
+//    return view('layout');
+//});
+
+Route::get('users', function()
+{
+    return View::make('users');
 });
