@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,14 @@ Route::get('/', function () {
 //    return view('layout');
 //});
 
+//Route::get('users', function()
+//{
+//    return View::make('users');
+//});
+
 Route::get('users', function()
 {
-    return View::make('users');
+    $users = User::all();
+ 
+    return View::make('users')->with('users', $users);
 });
