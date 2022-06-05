@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
+//class User extends \Illuminate\Database\Eloquent
 {
     use HasApiTokens, HasFactory, Notifiable;
 
