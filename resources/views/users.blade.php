@@ -10,14 +10,14 @@
 {# HTML::script('js/bootstrap.min.js') #}
 {# HTML::script('js/jquery.min.js') #}
 
-<link rel="stylesheet" href="{{asset('css/bootstrap-theme.min.css')}}">
-<script src="{{asset('js/jquery.min.js')}}"></script>
+<!--<link rel="stylesheet" href="{{asset('css/bootstrap-theme.min.css')}}">-->
+<script src="{{asset('AdminLTE-3.2.0/plugins/jquery/jquery.min.js')}}"></script>
 
 @section('content')
 <table style="border: 1px solid grey">
     <tr>
-        <td>{{ "name" }}</td>
-        <td>{{ "email"}}</td>
+        <td id="name">name</td>
+        <td id="email">{{ "email"}}</td>
     </tr>
     @foreach($users as $user)
     <tr>
@@ -33,7 +33,13 @@
 
 <script>
 $(document).ready(function(){
-    alert("TEST");
+    //alert("TEST");
+    for (i = 0; i < 10; i++)
+    {
+        console.log("num: " + i);
+    }
+    
+    $("#name").html("New");
 });
 </script>
 </html>

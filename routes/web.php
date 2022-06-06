@@ -22,11 +22,6 @@ Route::get('/', function () {
 //    return view('layout');
 //});
 
-//Route::get('users', function()
-//{
-//    return View::make('users');
-//});
-
 Route::get('users', function()
 {
     $users = User::all();
